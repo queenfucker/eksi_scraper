@@ -31,7 +31,7 @@ def save_to_yaml(data, filename):
     with open(filename, "w", encoding="utf-8") as yaml_file:
         yaml.dump(data, yaml_file, allow_unicode=True)
 
-url = "https://eksisozluk1923.com/"  # Replace with the URL of the webpage
+url = "https://eksisozluk1923.com/"  
 qa_pairs = extract_qa_pairs(url)
 
 if qa_pairs:
