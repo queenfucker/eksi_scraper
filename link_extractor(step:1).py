@@ -66,7 +66,7 @@ def main_loop():
             
             stored_links = load_links_from_json(section_links_filename)
             
-            # karsılastırma
+            # combine
             all_discovered_links = list(set(discovered_sections + stored_links))
             save_to_json(all_discovered_links, section_links_filename)
             
@@ -75,7 +75,7 @@ def main_loop():
                 
                 try:
                     section_data = extract_data_from_section(browser, section_url)
-                    # Process and save section_data as needed
+                    # process and save section_data 
                     
                     time.sleep(0.5)
                 except Exception as section_error:
@@ -87,7 +87,7 @@ def main_loop():
             print(f"Scraping cycle error: {cycle_error}")
         
         print("Scraping cycle completed. Waiting before the next cycle...")
-        time.sleep(0.5)  # Wait before the next scraping cycle
+        time.sleep(0.5)  
 
 if __name__ == "__main__":
     main_loop()
